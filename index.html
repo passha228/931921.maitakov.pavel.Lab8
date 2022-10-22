@@ -6,25 +6,27 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <table>
-        <tr id = "template" style = "display: none">
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><button onclick = "swapUp()">↑</button></td>
-            <td><button onclick = "swapDown()">↓</button></td>
-            <td><button onclick = "deleteElem()">×</button></td>
-        </tr>
-        <tr>
-            <td><input type="text"></td>
-            <td><input type="text"></td>
-            <td><button onclick = "swapUp()">↑</button></td>
-            <td><button onclick = "swapDown()">↓</button></td>
-            <td><button onclick = "deleteElem()">×</button></td>
-        </tr>
+    <table id = "table">
+        <tbody>
+            <tr id = "template" style = "display: none">
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><button onclick = "swapUp()">↑</button></td>
+                <td><button onclick = "swapDown()">↓</button></td>
+                <td><button onclick = "deleteElem()">×</button></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td><input type="text"></td>
+                <td><button onclick = "swapUp()">↑</button></td>
+                <td><button onclick = "swapDown()">↓</button></td>
+                <td><button onclick = "deleteElem()">×</button></td>
+            </tr>
+        </tbody>
     </table>
     
     <button onclick = "addElem()">Добавить элемент</button>
-    <button>Сохранить</button>
+    <button onclick = "save()">Сохранить</button>
 </body>
 <script src = "script.js"></script>
 </html>

@@ -50,3 +50,26 @@ function swapElements(obj1, obj2) {
         }
     }
 }
+
+function save() {
+    //table = document.getElementsByTagName("tr");
+    str = "{";
+    var t = document.getElementById('table');
+    var tra = t.children;
+    var trs = tra[0].children;
+    var tds = null;
+    var sum = 0;
+
+    for (var i=0; i<trs.length; i++)  {
+        if(trs[i].getAttribute("id") != "template"){
+            tds = trs[i].children;
+                str += '"' + tds[0].children[0].value + '" : ' + '"' + tds[1].children[0].value + '", ';
+                //console.log(tds[n].children[0].value);
+        }
+    }
+    
+    str += "}";
+    p = document.createElement("p");
+    p.textContent = str;
+    document.body.appendChild(p);    
+}
